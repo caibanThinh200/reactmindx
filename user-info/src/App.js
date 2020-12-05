@@ -3,7 +3,7 @@ import Header from './Components/Header'
 import Register from './Components/Register'
 import Login from './Components/Login'
 import './App.css';
-import { BrowserRouter } from "react-router-dom";
+
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <Register />
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 }
