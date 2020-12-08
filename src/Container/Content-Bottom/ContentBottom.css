@@ -1,0 +1,121 @@
+.contens-column{
+    padding-bottom: 3%;
+    background-color: #F2F2F2;
+}
+.contens-column-title-top h3{
+    text-align: center;
+    color:coral;
+    font-weight: 700;
+    font-size: 40px;
+    padding-top: 4%;
+    padding-bottom: 1%;
+  
+}
+.contens-column-title-top p{
+    line-height: 25px;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+ .title-img{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 70%;
+    padding-bottom: 6%;
+}
+.title-top-img {
+  
+    text-align: center;
+    padding-top: 5%;
+    margin: 0 auto;
+    width: 400px;
+    line-height: 25px;
+}
+.title-top-img img{
+    background-image: url('../Img/Img-Backgroud/36bf3b1e9eb640b51e3d12fde3385080.jpg');
+   width: 200px;
+   height:200px ;
+   border-radius: 200px;
+}
+.title-top-img h4{
+    padding-top: 5px;
+    padding-bottom: 8px;
+  color:coral;
+}
+.contens-column-title-top-img p {
+    text-align: center;
+    width: 100%;
+}
+.contens-column-center{
+    margin: 0 auto;
+    width: 80%;
+    height: 350px;
+    background-color:white;
+    box-shadow: 1px 3px  #E6E6E6;
+   
+}
+.contens-column-center h3{
+    font-size: 25px;
+    margin-left: 10%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.contens-column-center p{
+    margin-left: 10%;
+    padding-bottom: 30px;
+}
+.contens-column-center-img img{
+    margin-left: 10%;
+    width: 80%;
+    background-image: url("../Img/Img-Backgroud/cach-ship-hang-cod-hinh-thuc-ship-cho-nguoi-ban-hang-hieu-qua-1024x355.jpg");
+    height: 200px;
+    text-align: center;
+}
+.contens-column-bottom{
+    margin: 5% auto;
+    width: 80%;
+    height: 350px;
+    background-color:white;
+    border: 1px solid white;
+    box-shadow: 1px 3px  #E6E6E6;
+}
+.contens-column-bottom p{
+        /* padding: 1% 1%;
+        font-size: 30px;
+        float: left;
+        width: 91%; */
+
+        text-align: left;
+        margin-top: 10px;
+            padding-left: 1%;
+            font-size: 30px;
+            float: left;
+            width: 91%;
+}
+.contens-column-bottom a{
+    /* text-decoration: none;
+        padding: 1% 1%;
+        float: left;
+        width: 9%; */
+
+        text-align: right;
+        text-decoration: none;
+        padding-right: 1%;
+            margin-top: 17px;
+            float: left;
+            width: 7%;
+}
+.contens-column-bottom a:hover{
+    text-decoration: underline black;
+}
+.videoreview{
+    margin: 8% auto;
+    width: 80%;
+    height: 200px;
+}
+.videoreview iframe{
+  margin-left: 2.2% ;
+    width: 30%;
+    height: 200px;
+}

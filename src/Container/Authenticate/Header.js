@@ -1,7 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import '../csslogin/tailwind.css'
+import Register from '../Authenticate/Register';
+import Login from '../Authenticate/Login';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 const Header = () => {
     return(
+      <Router>
         <div className="">
       <nav className="bg-white box-border py-2">
         <div className="flex flex-row justify-between items-center container mx-auto">
@@ -22,12 +32,22 @@ const Header = () => {
             
           </div>
           <div className="text-white flex flex-row gap-5">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg uppercase"><a >đăng kí</a></button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg uppercase"><a href>đăng nhập</a></button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg uppercase"><Link to="/">đăng kí</Link></button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg uppercase"><Link to ="/SignIn">đăng nhập</Link></button>
           </div>
         </div>
       </nav>
     </div>
+    <Switch>
+      <Route exact path="/">
+        <Register/>
+      </Route>
+    
+      <Route path ="/SignIn">
+        <Login/>
+      </Route>
+    </Switch>
+    </Router>
     )
 }
 export default Header;

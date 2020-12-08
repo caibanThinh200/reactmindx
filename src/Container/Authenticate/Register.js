@@ -173,14 +173,14 @@ import React, { useState, useEffect, useRef, } from 'react'
 import '../csslogin/tailwind.css'
 import axios from 'axios'
 
-const register = () => {
+const Register = (props) => {
     // const [signUp, setSignUp] = useState({ username: '', pass: '', Fullname: '', UserAddress: '', Birth: '', Gmail: '' })
     const [username, setUsername] = useState("")
     const [pass, setPass] = useState("")
-    const [Fullname, setFullname] = useState("")
-    const [UserAddress, setUserAddress] = useState("")
-    const [Birth, setBirth] = useState("")
-    const [Gmail, setGmail] = useState("")
+    const [fullname, setFullname] = useState("")
+    const [userAddress, setUserAddress] = useState("")
+    const [birth, setBirth] = useState("")
+    const [gmail, setGmail] = useState("")
     const onChangeUsername = (e) => {
         const username = e.target.value;
         setUsername(username)
@@ -190,20 +190,20 @@ const register = () => {
         setPass(pass)
     }
     const onChangeFullname = (e) => {
-        const Fullname = e.target.value;
-        setFullname(Fullname)
+        const fullname = e.target.value;
+        setFullname(fullname)
     }
     const onchangeUseraddress = (e) => {
-        const UserAddress = e.target.value;
-        setUserAddress(UserAddress)
+        const userAddress = e.target.value;
+        setUserAddress(userAddress)
     }
     const onChangeBirth = (e) => {
-        const Birth = e.target.value;
-        setBirth(Birth)
+        const birth = e.target.value;
+        setBirth(birth)
     }
     const onChangeGmail = (e) => {
-        const Gmail = e.target.value;
-        setGmail(Gmail)
+        const gmail = e.target.value;
+        setGmail(gmail)
     }
     // const handleChange = (e) => {
     //     setSignUp({...signUp,[e.target.name] : e.target.value })
@@ -212,17 +212,20 @@ const register = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
+        const userInsert = {
+            username:username,
+            pass:pass, 
+            Fullname:fullname,
+            UserAddress:userAddress,
+            Birth:birth,
+            Gmail:gmail
+        };
+        
         // API_URL = 'https://5fad334d2ec98b0016047fb8.mockapi.io/register'
-        axios.post('https://5fad334d2ec98b0016047fb8.mockapi.io/register', {
-            username,
-            pass, 
-            Fullname,
-            UserAddress,
-            Birth,
-            Gmail
-        })
+        axios.post('User', userInsert)
             .then(function (reponse) {
-                console.log(reponse)
+                alert("Đăng kí thành công");
+               
             })
             .catch(function (error) {
                 return error;
@@ -274,4 +277,4 @@ const register = () => {
 
 
 }
-export default register;
+export default Register;

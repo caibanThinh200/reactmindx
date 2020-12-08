@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.w100{
+    width: 100%;
+
+}
+.w55{
+    width:55%;
+    height: 75px;
+}
+.w35{
+    width:35%;
+    height: 75px;
+}
+.w10{
+    width: 10%;
+    height: 75px;
+}
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    background-color: #E6E6E6;
+}
+.menu-logo{
+    text-align: right;
+   padding-top: 16px;
+}
+.menu-left img{
+    width: 80px;
+    border-radius: 30px;
+    cursor:pointer;
+}
+ .menu-center li{
+    list-style-type: none;
+   float: left;
+    margin-left: 9%;
+    margin-top: 30px;
+ }   
+.menu-center li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black; 
+} 
+.menu-center li  :hover{
+    color: #0080FF;
+}
+.float-left{
+    float: left;
+}
+.menu-right button{
+    margin-top: 19px;
+    margin-left:5% ;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 1%;
+}
+.menu-right input{
+    font-size: 15px;
+    width:53%;
+    padding: 10px ;
+    margin-left: 1%;
+    padding-left: 4.5%;
+}
+.clear{
+    clear: both;
+}
+
+
+
+
+
+
+
+@media  only screen and (max-width:1200px){
+    .bt-dangnhap{
+        display: none;
+    }
+    .w55{
+        width:45%;
+        height: 75px;
+
+    }
+    .menu-right button{
+        margin-top: 20px;
+        margin-left:12% ;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .w35{
+        width:40%;
+        height: 75px;
+    }
+}
+/* @media  only screen and (max-width:903px){
+    .menu-left input{
+        display: none;
+    }
+    .bt-giaohang{
+        display: none;
+    }
+    .w35{
+        width:60%;
+        height: 75px;
+    }
+    .w55{
+        width:20%;
+        height: 75px;
+    }
+    .bt-dangnhap{
+        display: block;
+    }
+    .menu-logo{
+     text-align:right;
+     padding-right: 2%;
+     padding-top: 16px;
+    }
+     .logo{
+        padding-top: 10%;
+        border-bottom:1px solid black ;
+    }
+    .footer-item{
+        margin: auto;
+        float: left;
+        width:42%;
+        margin-left: 5%  ;
+        text-align: center;
+    }
+    .clears{
+        clear: both;
+    }
+}
+
+@media  only screen and (max-width:630px){
+    .menu-left input{
+        display: none;
+    }
+    .bt-giaohang{
+        display: none;
+    }
+    .w35{
+       display: none;
+    }
+    .w55{
+        width:30%;
+        height: 75px;
+        padding:0 7% 0 8%;
+    }
+    .w10{
+        width: 50%;
+        height: 75px;
+    }    
+    .menu-logo{
+     text-align:center;
+     padding-top: 16px;
+    }
+    .logo{
+        border-bottom:1px solid black ;
+    }
+    .footer-item{
+        margin: auto;
+        margin-left: 15%  ;
+        float: left;
+        width:70%;
+        text-align: center;
+    }
+    .footer-item h3{
+        padding-top: 30px;
+    }
+    .clears{
+        clear: both;
+    }
+}  */
+
+
+
+
+

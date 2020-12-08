@@ -1,10 +1,10 @@
 import axios from 'axios'
 import authHeder from './auth-header'
 
-const API_URL = "http://10.5.10.119:3010/User/";
+const API_URL = "User/";
 
 const getPublicContent = () => {
-  return axios.get(API_URL + "all");
+  return axios.get(API_URL);
 };
 
 const getUserBoard = () => {
