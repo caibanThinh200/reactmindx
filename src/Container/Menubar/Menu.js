@@ -29,8 +29,8 @@ function Menubar() {
         .then(res => res.json())
         .then(json => setFullname(json[0].Fullname))
         .catch(e=>{
-            alert("Session exprires");
-            console.log(1);
+            alert("Bạn chưa có tài khoản , hãy đăng nhập để đặt hàng nhé");
+            
             //window.location = "/SignIn"
         })
     }
@@ -73,7 +73,8 @@ function Menubar() {
                   <div className="menu-right float-left w55">
                   <button className="bt-giaohang">GIAO NGAY</button>
                   <input type="text" placeholder="Nhập địa chỉ giao hàng" />
-                  <button className="bt-dangnhap"><Link to="/User">ĐĂNG NHẬP</Link></button>
+                  <button className="bt-dangnhap"><Link to="/Login">ĐĂNG NHẬP</Link></button>
+                  <button className="bt-signUp"><Link to="/SignUp">ĐĂNG KÝ</Link></button>
               </div>
 
                 }
@@ -83,10 +84,15 @@ function Menubar() {
         </nav>
         
         <Switch>
-            <Route path="/User">
-                <Header/>
+            <Route path="/Login">
+            
+               <Login/>
                
-               
+            </Route>
+            <Route path="/SignUp">
+                
+                <Register/>
+                
             </Route>
             <Route exact path="/"> 
                 <ContentTop />

@@ -52,7 +52,8 @@
 }
 .menu-right button{
     margin-top: 19px;
-    margin-left:5% ;
+ 
+    margin-right: 15%;
     font-size: 14px;
     cursor: pointer;
     padding: 10px 1%;

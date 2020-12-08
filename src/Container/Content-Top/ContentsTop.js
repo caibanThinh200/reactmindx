@@ -74,6 +74,7 @@ function ContentsTop(props){
        
         alert("Đã thêm giỏ hàng");
         })
+        .catch(e=>{alert("Bạn chưa đăng nhập vui lòng đăng nhập")})
     }
     const getSearchById =  (e,idFood)=>{
         e.preventDefault();
