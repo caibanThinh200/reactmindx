@@ -2,7 +2,7 @@ import React from 'react'
 import '../Footer/Footer.css'
 function Footer() {
     return (
-        <footer>
+        <footer style={{height:"30%"}}>
             <div className="footer-item">
                 <h3> Công ty</h3>
                 <p><a href>Giới thiệu </a></p>
