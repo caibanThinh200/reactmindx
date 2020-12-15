@@ -19,6 +19,7 @@ const required = (value) => {
         );
     }
 };
+
 const Login = (props) => {
     const form = useRef();
     const checkBtn = useRef();
@@ -45,11 +46,13 @@ const Login = (props) => {
             username:username,
             pass:password
         }
+        
         Axios.post("/User/login",clientInsert)
         .then(res => {
+            console.log(res);
             if(res.data.token){
-                localStorage.setItem("token",JSON.stringify(res.data.token))
-                
+               
+                localStorage.setItem("token",JSON.stringify(res.data));
                 setCheck(true);
                 alert("Đăng nhập thàng công");
                 window.location = "/";
@@ -58,32 +61,7 @@ const Login = (props) => {
                 alert("Sai tên đăng nhập hoặc mật khẩu");
             }
         })
-           
-       
-        // form.current.validateAll();
-
-        // if (checkBtn.current.context._errors.length === 0) {
-        //     AuthService.login(username, password).then(
-        //         () => {
-        //             props.history.push("/profile");
-        //             window.location.reload();
-        //         },
-        //         (error) => {
-        //             const resMessage =
-        //                 (error.response &&
-        //                     error.response.data &&
-        //                     error.response.data.message) ||
-        //                 error.message ||
-        //                 error.toString();
-
-        //             setLoading(false);
-        //             setMessage(resMessage);
-        //         }
-        //     );
-        // } else {
-        //     setLoading(false);
-        // }
-    };
+       };
 
 
     return (
@@ -127,4 +105,8 @@ const Login = (props) => {
                         
     )
 }
-export default Login;
+export default Login;           
+           
+       
+
+ 

@@ -6,6 +6,8 @@ import ContentTop from '../Content-Top/ContentsTop';
 import ContentBottom from '../Content-Bottom/ContentBottom';
 import Footer from '../Footer/Footer'
 import Cart from '../Cart/Cart';
+import FooterCart from '../Cart/Footer';
+import HeaderCart from '../Cart/Header'
 import '../csslogin/tailwind.css'
 
 import {
@@ -18,8 +20,11 @@ import {
 
 function Menubar() {
     const [fullname, setFullname] = useState("");
-    const user = JSON.parse(localStorage.getItem("token"));
-
+    const user = (localStorage.getItem("token"));
+   
+    
+           
+         
     const logout = (e) => {
         e.preventDefault();
         localStorage.removeItem("token");
@@ -57,12 +62,13 @@ function Menubar() {
     
                             </div>
                             <div className="flex flex-row gap-5">
-                                <Link to="/User">User-Info</Link>
+                               
                                 <span>Xin chào {fullname}</span>
                                 <span className="flex flex-row items-center gap-2">
-                                    <Link to="/cart" className="mb-2">Gio Hang</Link>
-                                    <i class="fad fa-shopping-cart"></i>
+                                    <Link to="/cart" className="mb-2"> <i class="fa fa-shopping-cart"></i>Giỏ Hàng</Link>
+                                    
                                 </span>
+                                <span onClick={(e)=>{logout(e)}}>Đăng xuất</span>
                             </div>
                         </div>
                     </div>
@@ -82,7 +88,8 @@ function Menubar() {
     
                             </div>
                             <div className="flex flex-row gap-5">
-                                <Link to="/User">User-Info</Link>
+                                <Link to="/SignUp">Đăng ký</Link>
+                                <Link to="/SignIn">Đăng nhập</Link>
                                 <div className="flex flex-row items-center gap-2">
                                     <Link to="/cart" className="mb-2">Gio Hang</Link>
                                     <i class="fad fa-shopping-cart"></i>
@@ -93,60 +100,19 @@ function Menubar() {
                     </nav>
                 )
             }
-           
-                {/* <div className="menu-left float-left w100">
-                <div className="menu-logo float-left w10 ">
-                    <a href><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQeYBiOjHAdPCbd4IaIkzOfsAkqUEdrrqPB2w&usqp=CAU" alt="" />
-                    </a>
-                </div>
-                <div className="menu-center float-left w35">
-                    <ul>
-
-                        <li>
-                            <Link to="/">Trang chủ</Link>
-                        </li>
-
-                        <li>
-
-                              <Link to ="/Cart">Giỏ hàng<i class="fas fa-shopping-cart w-35 float-left" ></i> </Link>  
-
-
-                        </li>
-
-                        <li>
-                            <a href>Liên hệ</a>
-                        </li>
-                    </ul>
-
-                </div>
-                {
-                    user ? 
-                    <div className="menu-right float-left w55">
-                    <button className="bt-giaohang">GIAO NGAY</button>
-                    <input type="text" placeholder="Nhập địa chỉ giao hàng" />
-                    <span>Hello {fullname}</span>
-                    <button className="signUp" onClick={(e)=>{logout(e)}}>ĐĂNG XUẤT</button>
-                </div>:
-                  <div className="menu-right float-left w55">
-                  <button className="bt-giaohang">GIAO NGAY</button>
-                  <input type="text" placeholder="Nhập địa chỉ giao hàng" />
-                  <button className="bt-dangnhap"><Link to="/User">ĐĂNG NHẬP</Link></button>
-              </div>
-
-                }
-
-            </div>
-            <div className="clear" /> */}
-            
-
-            <Switch>
-                <Route path="/User">
-                    <Header />
+              <Switch>
+                <Route path="/SignIn">
+                    <Login />
 
 
                 </Route>
+                <Route path="/SignUp">
+                    <Register/>
+                </Route>
                 <Route path="/cart">
+                 
                     <Cart/>
+                    <FooterCart/>
                 </Route>
                 <Route exact path="/">
                     <ContentTop />
@@ -162,3 +128,8 @@ function Menubar() {
 }
 
 export default Menubar
+
+              
+            
+
+         

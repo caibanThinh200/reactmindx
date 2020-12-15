@@ -1,11 +1,14 @@
 import React, {useEffect , useState} from 'react'
 import '../Content-Top/ContentsTop.css'
+const token =JSON.parse(localStorage.getItem("token"));
 
 function ContentsTop(props){
     const [product,setProduct]  = useState([]);
     const [cate,setCate] = useState([]);
     const [searchTitle,setSearchTitle] = useState("");
     const [searchResult,setSearchResult] = useState([]);
+  
+
     if(product == []){
         product = "Không có sản phẩm";
     }
@@ -64,17 +67,29 @@ function ContentsTop(props){
     }
    const addCart = (e,data)=>{
     e.preventDefault();
+    if(token){
     fetch("/Cart",{
         method:"POST",
         headers:{
+           "Authorization":"Bearer " + token.token,
             "Content-Type": "application/json",
           },
           body:JSON.stringify(data)
-    }).then(()=>{
-       
+    }).then((res)=>{
+       if(res == "You need account to use this function"){
+           alert("Bạn chưa có tài khoản");
+           window.location = "/SignIn"
+       }
+       else
         alert("Đã thêm giỏ hàng");
+        
         })
         .catch(e=>{alert("Bạn chưa đăng nhập vui lòng đăng nhập")})
+        }
+        else{
+         alert("Ban chưa đang nhập mà mua hàng gì, ngáo à ?????");
+         window.location = ("/SignIn")
+        }
     }
     const getSearchById =  (e,idFood)=>{
         e.preventDefault();
