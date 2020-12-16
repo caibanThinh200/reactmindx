@@ -249,7 +249,7 @@ const Register = (props) => {
 
                         <span className=" block">
                             <div className="flex items-center relative flex-col ">
-                                <input placeholder="nhập tên người dùng" name id className="border-2 border-blue-400 rounded-none block  bg-gray-100 focus:border-gray-500 text-gray-800 appearance-none w-full py-2 px-3 leading-tight " type="text"  onChange={onChangeUsername} />
+                                <input placeholder="nhập tên người dùng" name id className="border-2 border-blue-400 rounded-none block  bg-gray-100 focus:border-gray-500 text-gray-800 appearance-none w-full py-2 px-3 leading-tight " type="text"  onChange={onChangeUsername}  />
 
                                 <input placeholder="nhập pass" type="password" id className="border-2 border-blue-400 rounded-none block  bg-gray-100 focus:border-gray-500 text-gray-800 appearance-none w-full py-2 px-3 leading-tight focus:outline-none mt-5"  onChange={onChangePass} />
 

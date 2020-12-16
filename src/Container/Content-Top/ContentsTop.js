@@ -30,6 +30,11 @@ function ContentsTop(props){
    
       
     }
+     
+    // useEffect(() =>{
+
+    // },[])
+    
     useEffect(()=>{
         let searchString = searchTitle.trim().toLowerCase();
         fetch("/Home")
@@ -124,7 +129,7 @@ function ContentsTop(props){
                 {
                     cate.length > 0 ? cate.map((value,key)=>
                     
-                   <button key={key} onClick = {(e)=>{getIdCate(e,value.idCategory)}}>{value.nameCategory}</button>
+                   <button className="category" key={key} onClick = {(e)=>{getIdCate(e,value.idCategory)}}>{value.nameCategory}</button>
                 
                     ):<p>loading....</p>
                     
@@ -169,7 +174,7 @@ function ContentsTop(props){
             }
             <div id="contens-top">
                     <div className="contens-top">
-                        
+                      
                         {
                            product.length > 0? product.map((value,key)=>
                          
@@ -179,9 +184,10 @@ function ContentsTop(props){
                                <h6>{value.nameFood}</h6>
                                <h7>{value.price} VND </h7>
                                <p key={key} >{value.foodAdress} </p>
-                               <button style={{content:"center"}} onClick={(e)=>{addCart(e,{name:value.nameFood,price:value.price,image:value.image})}}>Thêm vào giỏ</button>
+                               {/* <button style={{content:"center"}} onClick={(e)=>{addCart(e,{name:value.nameFood,price:value.price,image:value.image})}}>Thêm vào giỏ</button> */}
                                
                            </div>
+                           <button style={{content:"center"}} onClick={(e)=>{addCart(e,{name:value.nameFood,price:value.price,image:value.image})}}>Thêm vào giỏ</button>
                          <p className="sale">Giảm 10%</p>
                        </div>
                            ):<div class="spinner-border text-danger" role="status">

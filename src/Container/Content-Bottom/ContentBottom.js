@@ -17,15 +17,15 @@ function ContentBottom() {
             </div>
             <div className="title-img">
                 <div className="title-top-img">
-                    <img src="../html/imgbackgroup/36bf3b1e9eb640b51e3d12fde3385080.jpg" alt="" />
+                    <div className="title-top-img-1">  </div>
                     <h4>Đa dạng sự lựa chọn</h4>
-                    <p> ABS có đội ngũ giao hàng nhanh thần tốc, mang cho bạn bữa ăn nóng hổi và ngon lành nhất, dù
+                    <p> Tất cả những sản phẩm của ABS đều được qua kiểm định, mang cho bạn bữa ăn an toàn nhất,
               bạn đang ở đâu.</p>
                 </div>
                 <div className="title-top-img">
-                    <img src="../html/imgbackgroup/36bf3b1e9eb640b51e3d12fde3385080.jpg" alt="" />
-                    <h4>Đa dạng sự lựa chọn</h4>
-                    <p> ABS có đội ngũ giao hàng nhanh thần tốc, mang cho bạn bữa ăn nóng hổi và ngon lành nhất, dù
+                    <div className="title-top-img-2">  </div>
+                    <h4>Đội ngũ giao hàng thần tốc</h4>
+                    <p> ABS mang đến cho bạn những bữa ăn nóng hổi và ngon lành nhất, dù
               bạn đang ở đâu.</p>
                 </div>
             </div>
@@ -38,7 +38,7 @@ function ContentBottom() {
                     tốt nhất.
           </p>
                 <div className="contens-column-center-img">
-                    <img src="../html/imgbackgroup/cach-ship-hang-cod-hinh-thuc-ship-cho-nguoi-ban-hang-hieu-qua-1024x355.jpg" alt="" />
+                    <div></div>
                 </div>
             </div>
             <div className="contens-column-bottom">

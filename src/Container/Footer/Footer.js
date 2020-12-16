@@ -2,7 +2,7 @@ import React from 'react'
 import '../Footer/Footer.css'
 function Footer() {
     return (
-        <footer style={{height:"30%"}}>
+        <footer style={{ height: "30%" }}>
             <div className="footer-item">
                 <h3> Công ty</h3>
                 <p><a href>Giới thiệu </a></p>
@@ -23,7 +23,7 @@ function Footer() {
             </div>
             <div className="clears" />
             <div className="footer-item logo">
-                <a href="./login.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQeYBiOjHAdPCbd4IaIkzOfsAkqUEdrrqPB2w&usqp=CAU" alt="" /></a> <br />
+                <a href="./login.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQeYBiOjHAdPCbd4IaIkzOfsAkqUEdrrqPB2w&usqp=CAU" alt="" /></a>
                 <p>© 2020 Now - A Foody Corporation</p>
                 <a href="#"><span className="fab fa-facebook-f" /></a>
                 <a href="#"><span className="fab fa-instagram" /></a>
